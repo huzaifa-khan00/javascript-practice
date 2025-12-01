@@ -62,7 +62,21 @@ console.log(itemSold);
 
   let gender = "Gender: male";
  
-   let bioData = fullName + "\n" + age + "\n" + gender;
+  let bioData = fullName + "\n" + age + "\n" + gender;
 
 console.log(bioData);
+}
+
+{
+  let firstName = "Huzaifa";
+
+  let lastName = "Khan";
+
+  let age = 24;
+
+  let gender = "male";
+
+  let bioData = "The following is my Bio Data 👍";
+
+  console.log(`My name is ${firstName + " " + lastName} and I am ${age} Years old & my Gender is ${gender} & ${bioData}`);
 }
