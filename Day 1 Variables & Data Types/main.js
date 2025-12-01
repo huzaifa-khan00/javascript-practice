@@ -1,4 +1,4 @@
-alert("Variables & Data Types")
+// alert("Variables & Data Types")
 
 console.log("My first code in javascript");
 
@@ -52,7 +52,6 @@ console.log(itemSold);
 // Block Scope
 
 {
-
   // Data written in a Block Scope will be recognized with the Block
   // out side of that block the value is Undefined (Doesn't exist)
 
@@ -80,3 +79,19 @@ console.log(bioData);
 
   console.log(`My name is ${firstName + " " + lastName} and I am ${age} Years old & my Gender is ${gender} & ${bioData}`);
 }
+
+// Non-Primitive Data Types (Object(Collection of Data(key:value pair)))
+
+// Object
+const student = {
+  fullName: "Huziafa Khan",
+  age: 24,
+  Gender: "male",
+  Grade: "",
+  isPass: true,
+}
+
+student["Grade"] = "A1+";
+student["fullName"] = "Huzaifa KHAN";
+
+console.log(`${student["fullName"]}`);
