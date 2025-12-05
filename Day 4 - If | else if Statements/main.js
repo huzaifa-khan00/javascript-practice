@@ -29,7 +29,7 @@ else if(lateMinute >5 && stdCard == true && eyeSight !== true){
 }
 
 else if(lateMinute <=5 && stdCard !== true && eyeSight !== true){
-    console.log("You are on-time but ⌛, you don't meet the neessary requirements 🚫 to apply for the Driving License 📝.")
+    console.log("")
 }
 
 else{
