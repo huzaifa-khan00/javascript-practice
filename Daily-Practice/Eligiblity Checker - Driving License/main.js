@@ -1,6 +1,6 @@
 let hasLearnersPermit = true;
 
-let passedVisionTest = false;
+let passedVisionTest = true;
 
 if (hasLearnersPermit == false) {
   console.log("Must get a learner's permit first.");
@@ -9,9 +9,9 @@ if (hasLearnersPermit == false) {
 } else if (hasLearnersPermit == true) {
   let age = prompt("Your age?");
 
-  // age = Number(prompt);
+  age = Number(age);
 
-  if (age === "" || age <= 0) {
+  if (!age) {
     console.log("Age is Required!");
   } else if (isNaN(age)) {
     console.log("Age must be a number!");
