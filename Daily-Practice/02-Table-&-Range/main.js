@@ -14,6 +14,6 @@ else if(!table || !range){
     console.log("invalid Input!");
 }
 
-else for(var i = 1; i <= range; i++){
+     for(var i = 1; i <= range; i++){
     console.log(table + " x", i, "=" ,i * table);
 }
