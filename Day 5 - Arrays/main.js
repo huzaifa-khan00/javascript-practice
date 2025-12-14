@@ -1,20 +1,19 @@
 let cities = ["atlanta", "baltimore", "denver", "chicago", "washington", "los angeles", "los vegas"];
 
-let citiesLength = array1.length -3;
+let citiesLength = cities.length -3;
 
-array1.pop();
+cities.pop();
 
-array1.push("Karachi");
+cities.push("Karachi");
 
-array1.splice();
+cities.splice();
 
 console.log(cities);
 
-array1.shift();
+cities.shift();
 
 let cities2 = cities.unshift("Atlanta", "Georgia", "Helsinki");
 
-console.log(cities);
+console.log(cities.length);
 
 console.log(cities2);
-
