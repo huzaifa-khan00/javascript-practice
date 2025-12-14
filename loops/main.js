@@ -10,7 +10,7 @@ for(i = 1; i <= 10; i++){
     evenNum = i + " Iterations";
 }
 
-console.log(evenNum, typeof ++evenNum);
+console.log(evenNum,"And the type is " + typeof ++evenNum);
 
 // Odd Number Generator
 
@@ -21,4 +21,4 @@ for(i = 1; i <= 10; i++){
     Oddnum = i + " Iterations";
 }
 
-console.log(Oddnum, typeof ++Oddnum);
+console.log(Oddnum, "And the type is " + typeof ++Oddnum);
