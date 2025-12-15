@@ -12,6 +12,9 @@ const cities = ["Atlanta", "Georgia", "Las Vegas", "baltimore", "denver", "tokyo
 
 cities.pop();
 
+// We can add new values to constant Array without errors
+cities.push("Netlify", "GoDaddy", "Vercel", "Hostinger");
+
 citiesLength = cities.length -3;
 
 newArray = cities.slice(2,4);
@@ -27,4 +30,3 @@ var hobby = "Car Drifting";
 console.log(passion);
 // This is the Tempral Dead Zone for Let
 let passion = "Full-Stack Web Developer";
-
