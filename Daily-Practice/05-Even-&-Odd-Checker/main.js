@@ -2,6 +2,9 @@ var nums = [];
 
 for (var i = 1; i <= 5; i++){
    var userInput = prompt("Enter Number " + i);
+   if(isNaN(userInput)){
+    console.log("Must Be a Number");
+   }
     nums.push(userInput);
 }
 
