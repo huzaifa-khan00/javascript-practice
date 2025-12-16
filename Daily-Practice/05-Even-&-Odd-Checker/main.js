@@ -4,6 +4,8 @@ for (var i = 1; i <= 5; i++){
    var userInput = prompt("Enter Number " + i);
    if(isNaN(userInput)){
     console.log("Must Be a Number");
+   }else if(userInput.trim() === ""){
+    console.log("Can't be empty");
    }
     nums.push(userInput);
 }
