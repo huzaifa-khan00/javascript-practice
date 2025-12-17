@@ -6,8 +6,7 @@ for (var i = 1; i <= 5; i++){
     console.log("Must Be a Number");
    }else if(userInput.trim() === ""){
     console.log("Can't be empty");
-   }
-    nums.push(userInput);
+   }else {nums.push(userInput);}
 }
 
 for(var i = 0; i < nums.length; i++){
