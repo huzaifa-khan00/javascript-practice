@@ -29,4 +29,4 @@ var hobby = "Car Drifting";
 
 console.log(passion);
 // This is the Tempral Dead Zone for Let
-let passion = "Full-Stack Web Developer";
+let passion = "Programming Enterpreneur";
