@@ -1,6 +1,5 @@
 let childCount = document.getElementById('container').children.length;
 let container = document.getElementById('container');
-
 let success = false;
 
 document.getElementById("numOfChild").innerHTML = childCount;
