@@ -10,7 +10,7 @@ for(var i=0; i < childCount; i++){
 }
 
 for(var j=0; j < childCount; j++){
-    if(container.children[i] %2 === 0){
+    if(j %2 === 0){
         container.children[j].style.color = "red";
         success = true;
     };
