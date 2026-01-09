@@ -38,6 +38,12 @@ main{
     text-align: center;
 }
 
+.hex-color{
+    color: rgb(0, 255, 8);
+    background-color: black;
+    border-radius: 5px;
+}
+
 h4{
     font-size: 30px;
 }
