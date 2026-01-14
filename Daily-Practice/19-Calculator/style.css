@@ -15,49 +15,177 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    padding: 5px;
     background: linear-gradient(180deg, #4e5357, #2C3034 70%);
     width: 150px;
     height: 300px;
     min-width: 150px;
     min-height: 300px;
     border-radius: 10px;
-    box-shadow: 3px 5px 10px 0px #212427;
-    padding: 5px;
-    padding-top: 20px;
+    box-shadow: 4px 2px 15px 0px #212325;
+    position: relative;
 }
 
-.btn-container{
-    height: 70%;
+#evaluation-display::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px 10px 0px 0px;
+    /* background: linear-gradient(90deg, #4e5357); */
+    /* background: linear-gradient(180deg, #2C3034, #4e5357 70%); */
+    background-color: #4e5357;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black -19%, transparent 100%);
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+}
+
+.btn-container2{
+    width: 100%;
+    display: grid;
+    align-items: end;
+    justify-items: end;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.equal{
+    grid-row: 5/7;
+    grid-column: 4/5;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.equal::after{
+    height: 100%;
+    border-radius: 5px;
+}
+
+.add{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.del{
+    grid-column: 3/4;
+    grid-row: 5/7; 
+}
+
+.dot{
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+
+
+.clear{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.left-par{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.right-par{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.plus{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.add{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.subtract{
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+.divide{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.multiply{
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+.button0{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.button1{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.button2{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.button3{
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+.button4{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.button5{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.button6{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.button7{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.button8{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.button9{
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
 
 button{
     height: 32px;
     width: 32px;
-    margin-bottom: 4px;
     color: rgb(174, 174, 174);
     border-radius: 100%;
     border: none;
-    background: linear-gradient(160deg,  #4e5357,#3f4346 70%);
+    background: linear-gradient(300deg,  #444649,#3f4346 50%);
     box-shadow: 1px 1px 2px 0px #212121;
     position: relative;
-}
-
-.equal{
-    height: 64px;
-    border-radius: 5px;
-}
-
-.equal::after{
-    height: 64px;
-    border-radius: 5px;
 }
 
 button::after{
@@ -65,7 +193,7 @@ button::after{
     height: 100%;
     width: 100%;
     border-radius: 100%;
-    box-shadow: -1px -1px 3px 0px #687077;
+    box-shadow: -1px -1px 1px 0px #687077;
     position: absolute;
     top: 0px;
     left: 0px;
