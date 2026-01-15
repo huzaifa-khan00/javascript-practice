@@ -1,9 +1,9 @@
-let equalCount = 0;
+let equalPress = 0;
 
 function calculator(data){
 
    if(data == "equal"){
-      equalCount++;
+      equalPress++;
 
       let currentData = document.getElementById('current-display').innerText;
 
@@ -11,7 +11,7 @@ function calculator(data){
 
       document.getElementById('second-display').innerText = currentData;
 
-      if(equalCount >= 2){
+      if(equalPress >= 2){
          document.getElementById('third-display').innerText = secValue;
          document.getElementById('current-display').innerText = currentData;
       }
@@ -33,6 +33,6 @@ function calculator(data){
       return;
    }
 
-   let currentData = document.getElementById('current-display').innerText += data;
+   document.getElementById('current-display').innerText += data;
    
 }
