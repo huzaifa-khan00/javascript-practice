@@ -17,6 +17,18 @@ main{
     align-items: center;
 }
 
+@keyframes animation {
+    from{
+        transition: all 1s ease;
+        height: 0px;
+        min-height: 0px;
+    }
+    to{
+        height: 600px;
+        min-height: 620px;
+    }
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -32,7 +44,7 @@ main{
     position: relative;
 }
 
-#eval-display-old::after{
+#third-display::after{
     content: '';
     position: absolute;
     top: 0px;
@@ -96,17 +108,16 @@ button:hover::after{
 }
 
 h1, p{
-    text-align: right;
+    align-self: self-end;
     font-size: xx-large;
+    overflow: hidden;
 }
 
 h1{
     height: 10%;
-    font-size: 70px;
+    font-size: 50px;
     color: rgb(202, 202, 202);
     padding-bottom: 5px;
-    overflow-y: hidden;
-    overflow-x: scroll;
 }
 
 p{
@@ -119,7 +130,7 @@ p{
     grid-column: 4/5;
     height: 100%;
     border-radius: 10px;
-    font-size: x-large;
+    font-size: 2.5em;
     background: linear-gradient(0deg, rgb(103, 1, 162) 5%, rgb(94, 0, 112) 80%);
 }
 
@@ -165,7 +176,17 @@ p{
 }
 
 .add, .subtract, .divide, .multiply{
+    transition: all 0.5s ease;
     background: linear-gradient(0deg, rgba(255, 26, 251, 0.157));
+    color: rgba(255, 26, 251, 0.556);
+}
+
+button:active{
+    color: rgb(244, 243, 243);
+    background: linear-gradient(300deg,  #444649,#3f4346 50%);
+    box-shadow: 1px 1px 2px 0px #212121;
+    transition: all 0.1s ease-in-out;
+    transform: scale(1);
 }
 
 .add{

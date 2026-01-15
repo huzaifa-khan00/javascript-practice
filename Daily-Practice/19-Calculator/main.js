@@ -5,23 +5,26 @@ function calculator(data){
    if(data == "equal"){
       equalCount++;
 
-      let result = document.getElementById('current-display').innerText;
+      let currentData = document.getElementById('current-display').innerText;
 
-      let evalDisplay = document.getElementById('eval-display').innerText = result;
+      let secValue = document.getElementById('second-display').innerText;
+
+      document.getElementById('second-display').innerText = currentData;
 
       if(equalCount >= 2){
-         document.getElementById('eval-display-old').innerText = evalDisplay;
+         document.getElementById('third-display').innerText = secValue;
+         document.getElementById('current-display').innerText = currentData;
       }
       
-      result = document.getElementById('current-display').innerText = eval(result);
+      currentData = document.getElementById('current-display').innerText = eval(currentData);
       
-      console.log(result)
+      console.log(currentData)
       return;
    }if(data == "clear"){
       equalCount = 0;
       document.getElementById('current-display').innerText = '';
-      document.getElementById('eval-display').innerText = '';
-      document.getElementById('eval-display-old').innerText = '';
+      document.getElementById('second-display').innerText = '';
+      document.getElementById('third-display').innerText = '';
       return;
    }if(data == "del"){
       let del = document.getElementById('current-display').innerText;
