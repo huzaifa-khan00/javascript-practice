@@ -13,6 +13,4 @@ function findSmallestInt(arr) {
   
 }
 
-var array = [8, 19, 7, 30];
-
-findSmallestInt(array);
+findSmallestInt([78,56,232,12,8, -350]);
