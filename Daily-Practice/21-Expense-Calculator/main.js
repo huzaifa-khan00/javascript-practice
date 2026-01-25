@@ -10,5 +10,16 @@ function totalExpense() {
   return total;
 }
 
-var result = totalExpense();
-console.log("Total Expense is: " + result);
+function averageExpense() {
+  var total = 0;
+
+  for (var i = 0; i < expenses.length; i++) {
+    total = total + expenses[i];
+  }
+
+  var avg = total / expenses.length;
+  return avg;
+}
+
+console.log("Total Expense is: " + totalExpense());
+console.log("Average Expense is: " + averageExpense());
