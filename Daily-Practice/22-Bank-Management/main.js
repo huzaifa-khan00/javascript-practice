@@ -17,3 +17,20 @@ function depositAmount() {
     initialAmount = initialAmount + amount;
     showResult.innerText = "Amount deposited: " + amount;
 }
+
+function withdrawAmount() {
+    var amount = Number(amountInput.value);
+
+    if (amount < 500) {
+        alert("Please withdraw at least 500");
+        return;
+    }
+
+    if (amount > initialAmount) {
+        alert("Insufficient balance");
+        return;
+    }
+
+    initialAmount = initialAmount - amount;
+    showResult.innerText = "Amount withdrawn: " + amount;
+}
