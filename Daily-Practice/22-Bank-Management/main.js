@@ -1,6 +1,7 @@
 var initialAmount = 5000;
 var showResult = document.getElementById('showResult');
 var amountInput = document.getElementById('amount-inp');
+var historyData = [];
 
 function checkAmount() {
     showResult.innerText = "Current amount: " + initialAmount;
@@ -15,6 +16,7 @@ function depositAmount() {
     }
 
     initialAmount = initialAmount + amount;
+    historyData.push("Deposited: " + amount);
     showResult.innerText = "Amount deposited: " + amount;
 }
 
@@ -32,5 +34,19 @@ function withdrawAmount() {
     }
 
     initialAmount = initialAmount - amount;
+    historyData.push("Withdrawn: " + amount);
     showResult.innerText = "Amount withdrawn: " + amount;
+}
+
+function viewHistory() {
+    showResult.innerText = "";
+
+    if (historyData.length == 0) {
+        showResult.innerText = "No history available";
+        return;
+    }
+
+    for (var i = 0; i < historyData.length; i++) {
+        showResult.innerHTML += historyData[i] + "<br>";
+    }
 }
