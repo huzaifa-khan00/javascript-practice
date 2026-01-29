@@ -3,32 +3,29 @@ let secondsDisplay = document.getElementById("seconds");
 let dot = document.getElementById("dot");
 let interval;
 let minutes = 24;
-let seconds = 59;
-let isStopped = false;
-let startIsPressed = false;
+let seconds = 60;
+
+function tick(isStart){
+    if(isStart === true){
+        console.log("got it");
+        clearInterval(interval);
+        interval = setInterval(start, 1000);
+    }
+}
 
 function start() {
-  if (isStopped === true) {
-    startIsPressed = true;
-    isStopped = false;
-  }
-
-  if (startIsPressed === true) {
-    interval = setInterval(start, 1000);
-    startIsPressed = false;
-  }
 
   if (minutesDisplay.innerText === "Great Job!") {
     clearInterval(interval);
     return;
   }
 
-  if (seconds === 1) {
-    minutes = minutes - 1;
+  if (seconds === 0) {
+    minutes--;
     seconds = 60;
   }
 
-  seconds = seconds - 1;
+  seconds--;
 
   if (minutes === 0 && seconds === 1) {
     minutesDisplay.innerText = "Great Job!";
@@ -43,16 +40,13 @@ function start() {
 
   if (seconds < 10) {
     secondsDisplay.innerText = "0" + seconds;
+  }else{
+      minutesDisplay.innerText = minutes;
+      secondsDisplay.innerText = seconds;
   }
 
-  minutesDisplay.innerText = minutes;
-  secondsDisplay.innerText = seconds;
 }
 
-interval = setInterval(start, 1000);
-
-function stop() {
-  isStopped = true;
-  console.log(isStopped);
+function stop(isStop) {
   clearInterval(interval);
 }
