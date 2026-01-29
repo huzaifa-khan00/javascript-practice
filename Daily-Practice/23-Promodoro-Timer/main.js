@@ -47,4 +47,7 @@ function stop(isStop) {
 function reset(){
   minutes = 24;
   seconds = 60;
+  clearInterval(interval);
+  minutesDisplay.innerText = minutes;
+  secondsDisplay.innerText = seconds;
 }
