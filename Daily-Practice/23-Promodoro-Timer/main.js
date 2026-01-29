@@ -5,17 +5,19 @@ let interval;
 let minutes = 24;
 let seconds = 60;
 
-function tick(isStart){
-    if(isStart === true){
-        console.log("got it");
-        clearInterval(interval);
-        interval = setInterval(start, 1000);
-    }
+function tick(isStart) {
+  if (isStart === true) {
+    console.log("got it");
+    clearInterval(interval);
+    interval = setInterval(start, 1000);
+  }
 }
 
 function start() {
-
-  if (minutesDisplay.innerText === "Great Job!") {
+  if (minutes === 0 && seconds === 0) {
+    minutesDisplay.innerText = "Great Job!";
+    secondsDisplay.innerText = "🥳";
+    dot.innerText = "";
     clearInterval(interval);
     return;
   }
@@ -27,24 +29,16 @@ function start() {
 
   seconds--;
 
-  if (minutes === 0 && seconds === 1) {
-    minutesDisplay.innerText = "Great Job!";
-    secondsDisplay.innerText = "🥳";
-    dot.innerText = "";
-    return;
-  }
-
   if (minutes < 10) {
     minutesDisplay.innerText = "0" + minutes;
   }
 
   if (seconds < 10) {
     secondsDisplay.innerText = "0" + seconds;
-  }else{
-      minutesDisplay.innerText = minutes;
-      secondsDisplay.innerText = seconds;
+  } else {
+    minutesDisplay.innerText = minutes;
+    secondsDisplay.innerText = seconds;
   }
-
 }
 
 function stop(isStop) {
