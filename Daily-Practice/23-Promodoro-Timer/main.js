@@ -7,7 +7,6 @@ let seconds = 60;
 
 function tick(isStart) {
   if (isStart === true) {
-    console.log("got it");
     clearInterval(interval);
     interval = setInterval(start, 1000);
   }
@@ -35,7 +34,7 @@ function start() {
 
   if (seconds < 10) {
     secondsDisplay.innerText = "0" + seconds;
-  } else {
+  }else{
     minutesDisplay.innerText = minutes;
     secondsDisplay.innerText = seconds;
   }
@@ -43,4 +42,9 @@ function start() {
 
 function stop(isStop) {
   clearInterval(interval);
+}
+
+function reset(){
+  minutes = 24;
+  seconds = 60;
 }
