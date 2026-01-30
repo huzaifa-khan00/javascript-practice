@@ -7,4 +7,6 @@ function calculateTip(){
 
     display.innerText = eval(bill + (bill * (tip/100)));
     tipDisplay.innerText = bill * (tip/100);
+    document.getElementById('bill-input').value = "";
+    document.getElementById('per-input').value = "";
 }
