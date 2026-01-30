@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Tip Calculator</title>
 </head>
 <body>
-    <div class="conatiner">
+    <div class="container">
         <h1>Tip Calculator</h1>
-        <p>Enter the bill amount and tip %tage to calculate the total</p>
-        <label for="bill-input"></label>
-        <inpu id="bill-input"></inpu>
-        <label for="per-input"></label>
-        <inpu id="per-input"></inpu>
+        <p>Enter the bill amount and tip percentage to calculate the <b style="color: red;">Total</b></p>
+        <label for="bill-input">Enter Bill Amount</label>
+        <input id="bill-input" type="number"></input>
+        <label for="per-input">Enter Tip Amount</label>
+        <input id="per-input" type="number"></input>
         <button>Calculate</button>
-        <div class="display" onClick=""></div>
+        <div class="display" onClick="" style="text-align: left; width: 90%; font-size: 30px;">Total: $<span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">0</span></div>
     </div>
 
     <script src="main.js"></script>
