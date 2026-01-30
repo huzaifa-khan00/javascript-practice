@@ -14,8 +14,9 @@
         <input id="bill-input" type="number"></input>
         <label for="per-input">Enter Tip Amount</label>
         <input id="per-input" type="number"></input>
-        <button>Calculate</button>
-        <div class="display" onClick="" style="text-align: left; width: 90%; font-size: 30px;">Total: $<span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">0</span></div>
+        <button onClick="calculateTip()">Calculate</button>
+        <div class="display" style="text-align: left; width: 90%; font-size: 30px;">Total: $<span style="color: red;" id="display" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">0</span></div>
+        <div style="text-align: left; width: 90%; font-size: 25px;">Tip: $<span id="tip-display" style="color: red;">0</span></div>
     </div>
 
     <script src="main.js"></script>
