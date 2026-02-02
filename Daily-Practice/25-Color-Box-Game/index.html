@@ -18,8 +18,7 @@
         }
 
         header{
-            height: 20%;
-            
+            height: 15%;
         }
 
         #header-box{
@@ -32,34 +31,38 @@
             height: 100%;
             width: 95%;
             margin: 0 auto;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .score-container > span{
-
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: x-large;
         }
 
         main{
             width: 100%;
-            height: 80%;
+
             background-color: gray;
+            overflow-y: auto;
         }
 
         #box-container{
-            margin: 0px auto;
-            width: 98%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           width: 98%;
+           row-gap: 1.25vw;
+           margin: 0px auto;
+           padding: 1.25vw 0px;
         }
 
-        div{
-            height: 50px;
-            width: 50px;
-            background-color: greenyellow;
+        .color-box{
+            width: 19%;
+            aspect-ratio: 1/1;
+            background-color: crimson;
         }
 
     </style>
@@ -79,36 +82,7 @@
 
     <main>
     <div id="box-container">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
     </div>
     </main>
 
