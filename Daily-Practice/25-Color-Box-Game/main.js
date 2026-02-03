@@ -46,81 +46,146 @@ let failMessages = [
   "Too many consecutive failures. 🛑🚧",
   "A cosmic ray hit your brain and caused that terrible move. 🌠🌀",
   "The system is dying from your lack of skill. 🧪🤢",
-  "ou’re trying to play, but you simply can't. 🧮❌",
+  "you’re trying to play, but you simply can't. 🧮❌",
   "I’m out of patience and you’re out of talent. 🪫💀",
-  "Skill gap detected. It’s a canyon. 🏔️⚠️"
+  "Skill gap detected. It’s a canyon. 🏔️⚠️",
 ];
 
 let colors = [
-  "#00F0FF", "#00FF00", "#FF00FF", "#4B0082", "#0000FF", 
-  "#7FFF00", "#008080", "#EE82EE", "#1E90FF", "#00FA9A",
-  "#8B008B", "#40E0D0", "#4169E1", "#50C878", "#FF69B4",
-  "#15317E", "#0047AB", "#007BA7", "#2554C7", "#DA70D6",
-  "#BF00FF", "#7FFFD4", "#2B65EC", "#191970", "#00CF35",
-  "#00BFFF", "#00FF7F", "#16E2F5", "#50C878", "#007FFF"
+  "#00F0FF",
+  "#00FF00",
+  "#FF00FF",
+  "#4B0082",
+  "#0000FF",
+  "#7FFF00",
+  "#008080",
+  "#EE82EE",
+  "#1E90FF",
+  "#00FA9A",
+  "#8B008B",
+  "#40E0D0",
+  "#4169E1",
+  "#50C878",
+  "#FF69B4",
+  "#15317E",
+  "#0047AB",
+  "#007BA7",
+  "#2554C7",
+  "#DA70D6",
+  "#BF00FF",
+  "#7FFFD4",
+  "#2B65EC",
+  "#191970",
+  "#00CF35",
+  "#00BFFF",
+  "#00FF7F",
+  "#16E2F5",
+  "#50C878",
+  "#007FFF",
 ];
 
 let mediumColors = [
-  "#1E90FF", "#1C86EE", "#1874CD", // Blues
-  "#32CD32", "#2EBC2E", "#2AA72A", // Greens
-  "#FF4500", "#E63E00", "#CC3700", // Reds
-  "#9370DB", "#8565C5", "#775AAF", // Purples
-  "#FFD700", "#E6C200", "#CCAC00", // Golds
-  "#FF1493", "#E61284", "#CC1076", // Pinks
-  "#00CED1", "#00B9BC", "#00A4A6", // Teals
-  "#7FFF00", "#72E600", "#66CC00", // Limes
-  "#8B4513", "#7D3E11", "#6F370F", // Browns
-  "#4682B4", "#3F75A2", "#386890"  // Slate Blues
+  "#1E90FF",
+  "#1C86EE",
+  "#1874CD", // Blues
+  "#32CD32",
+  "#2EBC2E",
+  "#2AA72A", // Greens
+  "#FF4500",
+  "#E63E00",
+  "#CC3700", // Reds
+  "#9370DB",
+  "#8565C5",
+  "#775AAF", // Purples
+  "#FFD700",
+  "#E6C200",
+  "#CCAC00", // Golds
+  "#FF1493",
+  "#E61284",
+  "#CC1076", // Pinks
+  "#00CED1",
+  "#00B9BC",
+  "#00A4A6", // Teals
+  "#7FFF00",
+  "#72E600",
+  "#66CC00", // Limes
+  "#8B4513",
+  "#7D3E11",
+  "#6F370F", // Browns
+  "#4682B4",
+  "#3F75A2",
+  "#386890", // Slate Blues
 ];
 
 let hardColors = [
-  "#0000FF", "#0000FD", "#0101FF", // Pure Blue
-  "#00FF00", "#00FD00", "#01FF01", // Pure Green
-  "#FF0000", "#FD0000", "#FF0101", // Pure Red
-  "#00FFFF", "#00FDFD", "#01FFFF", // Cyan
-  "#FF00FF", "#FD00FD", "#FF01FF", // Magenta
-  "#FFFF00", "#FDFD00", "#FFFF01", // Yellow
-  "#800080", "#7E007E", "#800180", // Purple
-  "#008080", "#007E7E", "#018080", // Teal
-  "#808080", "#7E7E7E", "#818181", // Gray
-  "#FF69B4", "#FF67B2", "#FD69B4"  // Hot Pink
+  "#0000FF",
+  "#0000FD",
+  "#0101FF", // Pure Blue
+  "#00FF00",
+  "#00FD00",
+  "#01FF01", // Pure Green
+  "#FF0000",
+  "#FD0000",
+  "#FF0101", // Pure Red
+  "#00FFFF",
+  "#00FDFD",
+  "#01FFFF", // Cyan
+  "#FF00FF",
+  "#FD00FD",
+  "#FF01FF", // Magenta
+  "#FFFF00",
+  "#FDFD00",
+  "#FFFF01", // Yellow
+  "#800080",
+  "#7E007E",
+  "#800180", // Purple
+  "#008080",
+  "#007E7E",
+  "#018080", // Teal
+  "#808080",
+  "#7E7E7E",
+  "#818181", // Gray
+  "#FF69B4",
+  "#FF67B2",
+  "#FD69B4", // Hot Pink
 ];
 
-let boxesContainer = document.getElementById('box-container');
-let headerBox = document.getElementById('header-box');
-let scoreDisplay = document.getElementById('score-display');
-let tryAgain = document.getElementsByClassName("try-again");
+let boxesContainer = document.getElementById("box-container");
+let headerBox = document.getElementById("header-box");
+let scoreDisplay = document.getElementById("score-display");
 let counter = 0;
 
-  reset();
+reset();
 
-function headerBoxColor(){
+function headerBoxColor() {
   let randomColor = Math.floor(Math.random() * colors.length);
-          headerBox.style.backgroundColor = colors[randomColor];
-}  
+  headerBox.style.backgroundColor = colors[randomColor];
+}
 
-  function reset(){
-
-    for (var i = 0; i <= 28; i++){
-        boxesContainer.innerText = "";
-        headerBoxColor();
-        var boxes = document.createElement('div');
-        boxes.className = 'game-box';
-        var randomColor = Math.floor(Math.random() * colors.length);
-        boxesContainer.appendChild(boxes);
-        boxes.style.backgroundColor = colors[randomColor];
-    }
+function reset() {
+  for (var i = 1; i <= 28; i++) {
+    headerBoxColor();
+    var boxes = document.createElement("div");
+    boxes.className = "game-box";
+    var randomColor = Math.floor(Math.random() * colors.length);
+    boxesContainer.appendChild(boxes);
+    boxes.style.backgroundColor = colors[randomColor];
+    boxes.classList.add('box' + i);
   }
+}
 
-  boxesContainer.addEventListener("click", colorPicker);
+boxesContainer.addEventListener("click", colorPicker);
 
-  function colorPicker(boxes){
-    if(boxes.target.style.backgroundColor === headerBox.style.backgroundColor){
-        scoreDisplay.innerText = counter++;
-    }else{
-      reset();
-      tryAgain[0].id = 'try-again';
-      var randomMessage = Math.floor(Math.random() * failMessages.length);
-      tryAgain[0].innerText = failMessages[randomMessage];
-      }
-    }
+function colorPicker(boxes) {
+  if (boxes.target.style.backgroundColor === headerBox.style.backgroundColor) {
+    scoreDisplay.innerText = ++counter;
+  } else {
+    boxesContainer.innerText = "";
+    reset();
+    let tryAgain = document.getElementsByClassName("try-again");
+    tryAgain[0].id = "try-again";
+    var randomMessage = Math.floor(Math.random() * failMessages.length);
+    tryAgain[0].innerText = failMessages[randomMessage];
+    scoreDisplay.innerText = counter = 0;
+  }
+}
