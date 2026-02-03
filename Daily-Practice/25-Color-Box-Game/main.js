@@ -5,13 +5,22 @@ let colors = ["#00F0FF", "#EC00FC", "#00CF35", "#007FFF", "#FF00FF",
   "#007BA7", "#7FFF00", "#2554C7", "#DA70D6", "#BF00FF",
   "#008080", "#7FFFD4", "#2B65EC", "#191970", "#8B008B"];
 let boxesContainer = document.getElementById('box-container');
+let headerBox = document.getElementById('header-box');
 
 let boxAmount = Number(prompt("How many boxes"));
 
   for (var i = 0; i <= boxAmount; i++){
-      let boxes = document.createElement('div');
+      var boxes = document.createElement('div');
       boxes.className = 'game-box';
-      let randomColor = Math.floor(Math.random() * colors.length);
+      var randomColor = Math.floor(Math.random() * colors.length);
       boxesContainer.appendChild(boxes);
       boxes.style.backgroundColor = colors[randomColor];
+      headerBox.style.backgroundColor = colors[randomColor];
   }
+
+  boxesContainer.addEventListener("click", colorPicker);
+
+  function colorPicker(boxes){
+    console.log(boxes.target.style.backgroundColor);
+  }
+
