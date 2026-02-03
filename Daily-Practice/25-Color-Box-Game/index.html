@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Game</title>
 
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
 
-        html, body{
+        html,
+        body {
             width: 100%;
             height: 100%;
         }
-
-        header{
-            height: 15%;
+        body{
+            background: linear-gradient(70deg, rgb(0, 0, 0), rgb(139, 139, 139), rgb(0, 0, 0));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        #header-box{
+        header {
+            height: 30%;
+            margin: 1%;
+        }
+
+        #header-box {
             height: 95%;
-            aspect-ratio: 1 / 1 ;
-            background-color: beige;
+            aspect-ratio: 1 / 1;
+            background-color: red;
+            border: 0.3vw solid black;
         }
 
-        .score-container{
+        .score-container {
             height: 100%;
-            width: 95%;
+            width: 98%;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            border-radius: 20px;
+            border: 6px solid rgb(55, 255, 0);
+            background-color: rgba(45, 207, 0, 0.7);
         }
 
-        .score-container > span{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
+        .score-container>span {
             font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        main{
+        main {
             width: 100%;
-
-            background-color: gray;
-            overflow-y: auto;
         }
 
-        #box-container{
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: space-between;
-           width: 98%;
-           row-gap: 1.25vw;
-           margin: 0px auto;
-           padding: 1.25vw 0px;
+        #box-container {
+            display: grid;
+            margin: 0px auto;
+            width: 98%;
+            height: 100%;
+            /* Now 1fr has a value to calculate! */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+            padding: 10px;
         }
 
-        .color-box{
-            width: 19%;
-            aspect-ratio: 1/1;
-            background-color: crimson;
+        .game-box {
+            background-color: red;
+            aspect-ratio: 1 / 1;
+            border: 0.3vw solid rgba(0, 0, 0, 0.281);
+            box-shadow: 0px 0px 6px 0px black;
         }
-
     </style>
 
 </head>
+
 <body>
     <header>
-    <div class="score-container">
-        <span id="score">Score: <span id="score-display"></span>0</span>
+        <div class="score-container">
+            <span id="score">Score: <span id="score-display">0</span></span>
 
-        <div id="header-box">
-            
-        </div>
+            <div id="header-box">
+
+            </div>
 
         </div>
     </header>
 
     <main>
-    <div id="box-container">
-
-    </div>
+        <div id="box-container">
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+            <div class="game-box"></div>
+        </div>
     </main>
 
     <script src="main.js"></script>
 </body>
+
 </html>
