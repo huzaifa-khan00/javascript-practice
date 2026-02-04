@@ -164,7 +164,6 @@ function headerBoxColor() {
 
 function reset() {
   for (var i = 1; i <= 28; i++) {
-    headerBoxColor();
     var boxes = document.createElement("div");
     boxes.className = "game-box";
     var randomColor = Math.floor(Math.random() * colors.length);
@@ -182,10 +181,12 @@ function colorPicker(boxes) {
   } else {
     boxesContainer.innerText = "";
     reset();
+    headerBoxColor();
     let tryAgain = document.getElementsByClassName("try-again");
     tryAgain[0].id = "try-again";
     var randomMessage = Math.floor(Math.random() * failMessages.length);
     tryAgain[0].innerText = failMessages[randomMessage];
-    scoreDisplay.innerText = counter = 0;
+    counter = 0;
+    scoreDisplay.innerText = counter;
   }
 }

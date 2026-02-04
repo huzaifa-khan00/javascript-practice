@@ -72,131 +72,131 @@ main {
   aspect-ratio: 1 / 1;
   border: 0.3vw solid balck;
   box-shadow: 0px 0px 6px 0px black;
-  animation: boxAnimation 1s ease;
+  animation: lefBoxesPan 1s ease;
   animation-fill-mode: both;
 }
 
 .box1 {
-  animation: boxAnimation 1s ease;
+  animation: lefBoxesPan 1s ease;
   animation-fill-mode: both;
 }
 .box2 {
-  animation: boxAnimation 1.2s ease;
+  animation: lefBoxesPan 1.2s ease;
   animation-fill-mode: both;
 }
 .box3 {
-  animation: boxAnimation 1.4s ease;
+  animation: lefBoxesPan 1.4s ease;
   animation-fill-mode: both;
 }
 .box4 {
-  animation: boxAnimation 1.6s ease;
+  animation: lefBoxesPan 1.6s ease;
   animation-fill-mode: both;
 }
 .box5 {
-  animation: boxAnimation 1.8s ease;
+  animation: lefBoxesPan 1.8s ease;
   animation-fill-mode: both;
 }
 .box6 {
-  animation: boxAnimation 2.0s ease;
+  animation: lefBoxesPan 2.0s ease;
   animation-fill-mode: both;
 }
 .box7 {
-  animation: boxAnimation 2.1s ease;
+  animation: lefBoxesPan 2.1s ease;
   animation-fill-mode: both;
 }
 .box8 {
-  animation: boxAnimation 2.2s ease;
+  animation: lefBoxesPan 2.2s ease;
   animation-fill-mode: both;
 }
 .box9 {
-  animation: boxAnimation 2.3s ease;
+  animation: lefBoxesPan 2.3s ease;
   animation-fill-mode: both;
 }
 .box10 {
-  animation: boxAnimation 2.4s ease;
+  animation: lefBoxesPan 2.4s ease;
   animation-fill-mode: both;
 }
 .box11 {
-  animation: boxAnimation 2.5s ease;
+  animation: lefBoxesPan 2.5s ease;
   animation-fill-mode: both;
 }
 .box12 {
-  animation: boxAnimation 2.6s ease;
+  animation: lefBoxesPan 2.6s ease;
   animation-fill-mode: both;
 }
 .box13 {
-  animation: boxAnimation 2.7s ease;
+  animation: lefBoxesPan 2.7s ease;
   animation-fill-mode: both;
 }
 .box14 {
-  animation: boxAnimation 2.8s ease;
+  animation: lefBoxesPan 2.8s ease;
   animation-fill-mode: both;
 }
 .box15 {
-  animation: boxAnimation 2.9s ease;
+  animation: lefBoxesPan 2.9s ease;
   animation-fill-mode: both;
 }
 .box16 {
-  animation: boxAnimation 3.0s ease;
+  animation: lefBoxesPan 3.0s ease;
   animation-fill-mode: both;
 }
 .box17 {
-  animation: boxAnimation 3.1s ease;
+  animation: lefBoxesPan 3.1s ease;
   animation-fill-mode: both;
 }
 .box18 {
-  animation: boxAnimation 3.2s ease;
+  animation: lefBoxesPan 3.2s ease;
   animation-fill-mode: both;
 }
 .box19 {
-  animation: boxAnimation 3.3s ease;
+  animation: lefBoxesPan 3.3s ease;
   animation-fill-mode: both;
 }
 .box20 {
-  animation: boxAnimation 3.4s ease;
+  animation: lefBoxesPan 3.4s ease;
   animation-fill-mode: both;
 }
 .box21 {
-  animation: boxAnimation 3.5s ease;
+  animation: lefBoxesPan 3.5s ease;
   animation-fill-mode: both;
 }
 .box22 {
-  animation: boxAnimation 3.6s ease;
+  animation: lefBoxesPan 3.6s ease;
   animation-fill-mode: both;
 }
 .box23 {
-  animation: boxAnimation 3.7s ease;
+  animation: lefBoxesPan 3.7s ease;
   animation-fill-mode: both;
 }
 .box24 {
-  animation: boxAnimation 3.8s ease;
+  animation: lefBoxesPan 3.8s ease;
   animation-fill-mode: both;
 }
 .box25 {
-  animation: boxAnimation 3.9s ease;
+  animation: lefBoxesPan 3.9s ease;
   animation-fill-mode: both;
 }
 .box26 {
-  animation: boxAnimation 4.0s ease;
+  animation: lefBoxesPan 4.0s ease;
   animation-fill-mode: both;
 }
 .box27 {
-  animation: boxAnimation 4.1s ease;
+  animation: lefBoxesPan 4.1s ease;
   animation-fill-mode: both;
 }
 .box28 {
-  animation: boxAnimation 4.2s ease;
+  animation: lefBoxesPan 4.2s ease;
   animation-fill-mode: both;
 }
 
-@keyframes boxAnimation {
+@keyframes lefBoxesPan {
   from {
-    transform: translateY(-1000px);
+    transform: translateX(-1000px);
     opacity: 0.2;
   }
 
   to {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
