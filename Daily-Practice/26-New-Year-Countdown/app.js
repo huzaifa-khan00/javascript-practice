@@ -9,6 +9,7 @@ updateCountdown();
 
 function updateCountdown() {
   let currentTime = new Date().getTime();
+
   let difference = newYearTime - currentTime;
 
   let seconds = 1000;
