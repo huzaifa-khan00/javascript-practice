@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(231, 231, 0);
+}
+
+#input-wrapper{
+    height: 5vw;
+    width: 35vw;
+    margin-top: 10%;
+    position: relative;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#input-wrapper:has(input:focus):not(:has(button:focus)) {
+    transform: scale(0.95);
+    -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#add-task{
+    font-family: 'science gothic', Courier, monospace;
+    font-size: larger;
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 100%;
+    width: 20%;
+    border-radius: 0px 15px 0px 0px;
+    border: none;
+    -webkit-border-radius: 0px 15px 0px 0px;
+    -moz-border-radius: 0px 15px 0px 0px;
+    -ms-border-radius: 0px 15px 0px 0px;
+    -o-border-radius: 0px 15px 0px 0px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#add-task:hover{
+    cursor: pointer;
+}
+
+input{
+    font-family: serif;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px 3px 5px 0px rgb(162, 162, 0);
+    transition: all 0.5s ease both;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease both;
+    -ms-transition: all 0.5s ease both;
+    -o-transition: all 0.5s ease both;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -ms-border-radius: 15px 15px 0px 0px;
+    -o-border-radius: 15px 15px 0px 0px;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+/* input:focus  */
+
+input::placeholder{
+    color: rgb(219, 219, 219);
+}
