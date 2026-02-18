@@ -1,10 +1,9 @@
 let parentContainer = document.getElementById('container');
-let userTask = document.getElementById('input');
+let tasklist = [];
 
 function create(){
-    // let addNewTask = document.createElement('p');
-    // addNewTask.id = 'new-task';
-    // addNewTask.innerText = userTask.value;
-    parentContainer.innerHTML += `<div id="new-task-wrapper"><p id="new-task">${userTask.value}</p><div id="btn-wrapper"><button id="update">Update</button><button id="delete">Delete</button></div>`;
-    console.log(parentContainer.innerHTML);
+    let taskValue = document.getElementById('input');
+    let createdAt = new Date();
+    console.log(createdAt.getFullYear());
+    parentContainer.innerHTML += `<div id="new-task-wrapper"><p id="new-task">${taskValue.value}</p><div id="btn-wrapper"><div id="update"></div><div id="delete"></div></div></div>`
 }
