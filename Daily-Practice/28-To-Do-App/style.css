@@ -86,6 +86,33 @@ main {
   cursor: pointer;
 }
 
+#update-task {
+    display: none;
+  font-weight: 600;
+  font-family: "science gothic", Courier, monospace;
+  font-size: larger;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  border-radius: 0px 15px 0px 0px;
+  border: none;
+  -webkit-border-radius: 0px 15px 0px 0px;
+  -moz-border-radius: 0px 15px 0px 0px;
+  -ms-border-radius: 0px 15px 0px 0px;
+  -o-border-radius: 0px 15px 0px 0px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+#update-task:hover {
+  cursor: pointer;
+}
+
 input {
   font-family: serif;
   border: none;
@@ -192,5 +219,5 @@ input::placeholder {
 
 #new-task{
   top:50%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
