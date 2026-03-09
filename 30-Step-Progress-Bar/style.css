@@ -43,6 +43,114 @@ html,body{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    position: relative;
+}
+
+.step-1{
+    border-color: green;
+}
+
+.step-1::after{
+    content: '\2713';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.step-2::after{
+    content: '\2713';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+.step-3::after{
+    content: '\2713';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+.step-4::after{
+    content: '\2713';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+.step-5::after{
+    content: '\2713';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+.step-2::before{
+    content: '\2717';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.step-3::before{
+    content: '\2717';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.step-4::before{
+    content: '\2717';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.step-5::before{
+    content: '\2717';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
 }
 
 .btn-container{
@@ -97,3 +205,26 @@ html,body{
     z-index: -1;
 }
 
+#progress-bar-front{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: green;
+    height: 4px;
+    border: none;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: -1;
+}
+
+.step-1-text{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
