@@ -28,7 +28,7 @@ html, body{
     align-items: center;
 }
 
-button{
+#roll-dice-btn{
     font-size: 15px;
     margin-top: 10%;
     border: none;
@@ -47,7 +47,7 @@ button{
     -o-transition: all 0.5s ease;
 }
 
-button:hover{
+#roll-dice-btn:hover{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -86,4 +86,65 @@ h1{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+#modal-container{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.667);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0px;
+}
+
+#modal-window{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* display: none; */
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(138, 138, 138);
+    font-size: xx-large;
+    font-weight: bold;
+    color: rgb(221, 0, 0);
+    text-shadow: 0px 0px 0px black;
+    box-shadow: 0px 0px 10px 0px rgb(32, 32, 32);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#close-modal-btn{
+    border: none;
+    font-size: 10px;
+    align-self: flex-end;
+    padding: 5px 15px;
+    background-color: whitesmoke;
+    border-radius: 0px 5px 0px 0px;
+    -webkit-border-radius: 0px 5px 0px 0px;
+    -moz-border-radius: 0px 5px 0px 0px;
+    -ms-border-radius: 0px 5px 0px 0px;
+    -o-border-radius: 0px 5px 0px 0px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#close-modal-btn:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+#text{
+    margin-bottom: 12%;
 }
