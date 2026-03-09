@@ -24,8 +24,10 @@ function renderHistory() {
   if (historyList.length >= 11) {
     document.getElementById('text').innerText = "History Limit Reached!";
     modalWindow.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
     return;
   }
+
   html = "";
   let counter = 1;
   for (var i = 0; i < historyList.length; i++) {
@@ -39,6 +41,7 @@ function renderHistory() {
 
 function closeModal(){
     modalWindow.style.display = 'none';
+    document.body.style.overflow = 'scroll';
 }
 
 rollDice.addEventListener("click", renderHistory);
