@@ -64,3 +64,26 @@ h3{
 h1{
     font-size: 60px;
 }
+
+#dice-history-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    margin-top: 4%;
+}
+
+.dice-history{
+    background-color: bisque;
+    height: 70px;
+    padding: 0px 5px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
