@@ -35,40 +35,9 @@ function stepBackward() {
   if (stepCounter === 0) {
     previousStep.setAttribute("disabled", "true");
   }
-  switch (stepCounter) {
-    case 3:
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
       stepText[stepCounter].classList.remove("text-animate");
       step[oneStepForward].classList.add("step-unchecked");
-      break;
-
-    case 2:
-      progressBar.style.width = `${progressLength}%`;
-      stepText[oneStepForward].innerText = ``;
-      step[oneStepForward].classList.remove("step-checked");
-      stepText[stepCounter].classList.remove("text-animate");
-      step[oneStepForward].classList.add("step-unchecked");
-      break;
-
-    case 1:
-      progressBar.style.width = `${progressLength}%`;
-      stepText[oneStepForward].innerText = ``;
-      step[oneStepForward].classList.remove("step-checked");
-      stepText[stepCounter].classList.remove("text-animate");
-      step[oneStepForward].classList.add("step-unchecked");
-      break;
-
-    case 0:
-      progressBar.style.width = `${progressLength}%`;
-      stepText[oneStepForward].innerText = ``;
-      step[oneStepForward].classList.remove("step-checked");
-      stepText[stepCounter].classList.remove("text-animate");
-      step[oneStepForward].classList.add("step-unchecked");
-      break;
-
-    default:
-      break;
-  }
 }
