@@ -58,11 +58,11 @@ html,body{
 
 .step-checked{
     border-color: green;
-    transition: border-color 0.5s ease 0.5;
-    -webkit-transition: border-color 0.5s ease 0.5;
-    -moz-transition: border-color 0.5s ease 0.5;
-    -ms-transition: border-color 0.5s ease 0.5;
-    -o-transition: border-color 0.5s ease 0.5;
+    transition: border-color 0.5s ease 0.5s;
+    -webkit-transition: border-color 0.5s ease 0.5s;
+    -moz-transition: border-color 0.5s ease 0.5s;
+    -ms-transition: border-color 0.5s ease 0.5s;
+    -o-transition: border-color 0.5s ease 0.5s;
 }
 
 .step-checked::after{
@@ -70,7 +70,18 @@ html,body{
     font-family: cursive;
     font-size: 20px;
     font-weight: bold;
-    color: green;
+    color: lightgray;
+    animation: colorFade 0.5s ease 0.5s forwards;
+    -webkit-animation: colorFade 0.5s ease 0.5s forwards;
+}
+
+@keyframes colorFade {
+    from{
+        color: lightgray
+    }
+    to{
+        color: green;
+    }
 }
 
 .step-unchecked::before{
@@ -118,6 +129,16 @@ html,body{
     background-color: rgb(62, 46, 73);
 }
 
+#previous-step-btn:disabled, #next-step-btn:disabled{
+    background-color: lightgray;
+    cursor: none;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+
 #progress-bar-back{
     position: absolute;
     top: 50%;
@@ -152,9 +173,15 @@ html,body{
 .step-text{
     font-family: cursive;
     font-size: 15px;
-    color: green;
     position: absolute;
     bottom: -20px;
     text-align: center;
     width: 100px;
+
+}
+
+.text-animate{
+    color: lightgray;
+    animation: colorFade 0.5s ease 0.5s forwards;
+    -webkit-animation: colorFade 0.5s ease 0.5s forwards;
 }
