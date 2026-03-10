@@ -58,6 +58,11 @@ html,body{
 
 .step-checked{
     border-color: green;
+    transition: border-color 0.5s ease 0.5;
+    -webkit-transition: border-color 0.5s ease 0.5;
+    -moz-transition: border-color 0.5s ease 0.5;
+    -ms-transition: border-color 0.5s ease 0.5;
+    -o-transition: border-color 0.5s ease 0.5;
 }
 
 .step-checked::after{
