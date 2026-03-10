@@ -32,7 +32,14 @@ html,body{
     z-index: 1;
 }
 
-.step-1, .step-2, .step-3, .step-4, .step-5{
+.step-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step{
     width: 45px;
     aspect-ratio: 1 / 1;
     height: 45px;
@@ -43,110 +50,26 @@ html,body{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.step-1{
+.step-checked{
     border-color: green;
 }
 
-.step-1::after{
+.step-checked::after{
     content: '\2713';
-    position: absolute;
-    top: 10%;
-    left: 30%;
     font-family: cursive;
     font-size: 20px;
     font-weight: bold;
     color: green;
 }
 
-.step-2::after{
-    content: '\2713';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
-    display: none;
-}
-
-.step-3::after{
-    content: '\2713';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
-    display: none;
-}
-
-.step-4::after{
-    content: '\2713';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
-    display: none;
-}
-
-.step-5::after{
-    content: '\2713';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
-    display: none;
-}
-
-.step-2::before{
+.step-unchecked::before{
     content: '\2717';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: lightgray;
-}
-
-.step-3::before{
-    content: '\2717';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: lightgray;
-}
-
-.step-4::before{
-    content: '\2717';
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: lightgray;
-}
-
-.step-5::before{
-    content: '\2717';
-    position: absolute;
-    top: 10%;
-    left: 30%;
     font-family: cursive;
     font-size: 20px;
     font-weight: bold;
@@ -212,19 +135,15 @@ html,body{
     background-color: green;
     height: 4px;
     border: none;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     z-index: -1;
 }
 
-.step-1-text{
-    position: absolute;
-    left: 30%;
-    top: 10%;
+.step-text{
     font-family: cursive;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
     color: green;
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    width: 100px;
 }
