@@ -38,6 +38,6 @@ function stepBackward() {
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
-      stepText[stepCounter].classList.remove("text-animate");
+      stepText[oneStepForward].classList.remove("text-animate");
       step[oneStepForward].classList.add("step-unchecked");
 }
