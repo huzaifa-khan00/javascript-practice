@@ -23,6 +23,7 @@ function stepForward() {
       step[stepCounter].classList.remove("step-unchecked");
       void step[stepCounter].offsetWidth;
       step[stepCounter].classList.add("step-checked");
+      void step[stepCounter].offsetWidth;
       stepText[stepCounter].classList.add("text-animate");
       break;
 
@@ -32,6 +33,7 @@ function stepForward() {
       step[stepCounter].classList.remove("step-unchecked");
       void step[stepCounter].offsetWidth;
       step[stepCounter].classList.add("step-checked");
+      void step[stepCounter].offsetWidth;
       stepText[stepCounter].classList.add("text-animate");
       break;
 
@@ -41,6 +43,7 @@ function stepForward() {
       step[stepCounter].classList.remove("step-unchecked");
       void step[stepCounter].offsetWidth;
       step[stepCounter].classList.add("step-checked");
+      void step[stepCounter].offsetWidth;
       stepText[stepCounter].classList.add("text-animate");
       break;
 
@@ -50,6 +53,7 @@ function stepForward() {
       step[stepCounter].classList.remove("step-unchecked");
       void step[stepCounter].offsetWidth;
       step[stepCounter].classList.add("step-checked");
+      void step[stepCounter].offsetWidth;
       stepText[stepCounter].classList.add("text-animate");
       break;
 
@@ -73,6 +77,7 @@ function stepBackward(){
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
+      stepText[stepCounter].classList.remove("text-animate")
       step[oneStepForward].classList.add("step-unchecked");
       break;
 
@@ -80,6 +85,7 @@ function stepBackward(){
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
+      stepText[stepCounter].classList.remove("text-animate")
       step[oneStepForward].classList.add("step-unchecked");
       break;
 
@@ -87,6 +93,7 @@ function stepBackward(){
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
+      stepText[stepCounter].classList.remove("text-animate")
       step[oneStepForward].classList.add("step-unchecked");
       break;
 
@@ -94,6 +101,7 @@ function stepBackward(){
       progressBar.style.width = `${progressLength}%`;
       stepText[oneStepForward].innerText = ``;
       step[oneStepForward].classList.remove("step-checked");
+      stepText[stepCounter].classList.remove("text-animate")
       step[oneStepForward].classList.add("step-unchecked");
       break;
 
