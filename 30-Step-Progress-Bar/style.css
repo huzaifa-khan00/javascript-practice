@@ -136,6 +136,7 @@ html,body{
     height: 4px;
     border: none;
     z-index: -1;
+    width: 0%;
 }
 
 .step-text{
