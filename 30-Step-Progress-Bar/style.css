@@ -112,26 +112,31 @@ html,body{
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease, transform 0.05s ease;
+    -webkit-transition: all 0.3s ease, transform 0.05s ease;
+    -moz-transition: all 0.3s ease, transform 0.05s ease;
+    -ms-transition: all 0.3s ease, transform 0.05s ease;
+    -o-transition: all 0.3s ease, transform 0.05s ease;
 }
 
 #previous-step-btn:hover, #next-step-btn:hover{
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
     cursor: pointer;
-    background-color: rgb(62, 46, 73);
+    background-color: rgb(163, 90, 231);
+}
+
+#previous-step-btn:active, #next-step-btn:active{
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    cursor: pointer;
+    background-color: rgb(152, 74, 225);
 }
 
 #previous-step-btn:disabled, #next-step-btn:disabled{
     background-color: lightgray;
-    cursor: none;
+    cursor: pointer;
     transform: none;
     -webkit-transform: none;
     -moz-transform: none;
