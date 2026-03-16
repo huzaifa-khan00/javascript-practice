@@ -36,6 +36,15 @@ header{
     color: white;
 }
 
+.js-logo{
+    height: 70px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
 header>p{
     font-size: 22px;
     width: 80%;
