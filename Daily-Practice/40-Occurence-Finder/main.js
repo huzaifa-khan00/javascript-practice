@@ -18,9 +18,9 @@ for(var i = 0; i < para.length; i++){
 
     if(targetFound === occurence){
         arrow = arrow.slice(13);
-        console.log(`Found the letter "${para.slice(i, i+1)}" at index ${i+1}`);
+        console.log(`Found the letter "${para.slice(i, i+1)}" at index ${i+1}   Your ↓ String`);
         console.log(para);
-        console.log(arrow + "Your letter ^");
+        console.log(arrow + "Your letter ↑");
         console.log("Occurence selected: "+occurence);
         break;
     }
