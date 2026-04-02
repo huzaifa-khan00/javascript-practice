@@ -1,7 +1,6 @@
 let taskContainer = document.getElementById("task-container");
-let tasklist = [];
+let taskList = [];
 let updateIndex = null;
-
 let addBtn = document.getElementById("add-task");
 let updateBtn = document.getElementById("update-task");
 
@@ -21,7 +20,11 @@ function createTask() {
     createdAt: new Date(),
   };
 
-  tasklist.push(taskObj);
+  taskList.push(taskObj);
+  window.localStorage.setItem('taskList', JSON.stringify(taskList));
+  let localStorageData = window.localStorage.getItem('taskList');
+  console.log(localStorageData);
+
   taskValue.value = "";
   readTask();
 }
@@ -29,22 +32,22 @@ function createTask() {
 function readTask() {
   taskContainer.innerHTML = "";
 
-  for (let i = 0; i < tasklist.length; i++) {
+  for (let i = 0; i < taskList.length; i++) {
     taskContainer.innerHTML += `
         <div id="new-task-wrapper">
-            <p id="new-task">${tasklist[i].text}</p>
+            <p id="new-task">${taskList[i].text}</p>
             <div id="btn-wrapper">
-                <div id="update" onClick="editTask(${tasklist[i].id})"></div>
-                <div id="delete" onClick="deleteTask(${tasklist[i].id})"></div>
+                <div id="update" onClick="editTask(${taskList[i].id})"></div>
+                <div id="delete" onClick="deleteTask(${taskList[i].id})"></div>
             </div>
         </div>`;
   }
 }
 
 function deleteTask(id) {
-  for (let i = 0; i < tasklist.length; i++) {
-    if (tasklist[i].id == id) {
-      tasklist.splice(i, 1);
+  for (let i = 0; i < taskList.length; i++) {
+    if (taskList[i].id == id) {
+      taskList.splice(i, 1);
     }
   }
   readTask();
@@ -53,9 +56,9 @@ function deleteTask(id) {
 function editTask(id) {
   let taskValue = document.getElementById("input");
 
-  for (let i = 0; i < tasklist.length; i++) {
-    if (tasklist[i].id == id) {
-      taskValue.value = tasklist[i].text;
+  for (let i = 0; i < taskList.length; i++) {
+    if (taskList[i].id == id) {
+      taskValue.value = taskList[i].text;
       updateIndex = i;
     }
   }
@@ -68,11 +71,11 @@ function editTask(id) {
 function finalUpdate() {
   let taskValue = document.getElementById("input");
 
-  tasklist[updateIndex].text = taskValue.value;
+  taskList[updateIndex].text = taskValue.value;
   taskValue.value = "";
 
   updateBtn.style.display = "none";
   addBtn.style.display = "inline";
 
   readTask();
-}
+};
