@@ -47,7 +47,7 @@ function readTask() {
                 <div id="update" onClick="editTask(${taskList[i].id})"></div>
                 <div id="delete" onClick="deleteTask(${taskList[i].id})"></div>
             </div>
-        </div>`;
+        </div><div id="created-at">${taskList[i].createdAt}</div>`;
   }
 }
 

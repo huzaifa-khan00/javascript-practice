@@ -222,6 +222,10 @@ input::placeholder {
     background-size: contain;
 }
 
+#created-at{
+
+}
+
 #update{
     background-image: url(./assets/icons/edit.png);
     background-repeat: no-repeat;
