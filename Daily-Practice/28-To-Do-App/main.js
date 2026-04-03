@@ -6,6 +6,15 @@ let updateBtn = document.getElementById("update-task");
 
 updateBtn.style.display = "none";
 
+function getLocalStorageData() {
+  let getTasksData = window.localStorage.getItem("taskList");
+  if (getTasksData !== null) {
+    taskList = JSON.parse(getTasksData);
+  }
+  readTask();
+}
+getLocalStorageData();
+
 function createTask() {
   let taskValue = document.getElementById("input");
 
@@ -21,9 +30,7 @@ function createTask() {
   };
 
   taskList.push(taskObj);
-  window.localStorage.setItem('taskList', JSON.stringify(taskList));
-  let localStorageData = window.localStorage.getItem('taskList');
-  console.log(localStorageData);
+  window.localStorage.setItem("taskList", JSON.stringify(taskList));
 
   taskValue.value = "";
   readTask();
@@ -48,6 +55,7 @@ function deleteTask(id) {
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id == id) {
       taskList.splice(i, 1);
+      window.localStorage.setItem("taskList", JSON.stringify(taskList));
     }
   }
   readTask();
@@ -72,10 +80,18 @@ function finalUpdate() {
   let taskValue = document.getElementById("input");
 
   taskList[updateIndex].text = taskValue.value;
+  window.localStorage.setItem("taskList", JSON.stringify(taskList));
+
   taskValue.value = "";
 
   updateBtn.style.display = "none";
   addBtn.style.display = "inline";
 
   readTask();
-};
+}
+
+function deleteAll() {
+  taskList = [];
+  window.localStorage.removeItem("taskList");
+  readTask();
+}
